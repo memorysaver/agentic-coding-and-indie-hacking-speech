@@ -329,13 +329,271 @@ layout: default
 </div>
 
 ---
+layout: default
+---
 
-# Slide 3
+<style>
+.slidev-layout {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
+  padding: 2rem;
+}
 
-Content for slide 3 - awaiting your instructions.
+.slidev-layout h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #58a6ff 0%, #8be9fd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section {
+  background: rgba(13, 17, 23, 0.6);
+  border: 1px solid rgba(139, 233, 253, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  color: #8be9fd;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-text {
+  color: #c9d1d9;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.file-example {
+  font-family: 'Monaco', 'Cascadia Code', monospace;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 1rem;
+  color: #c9d1d9;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.highlight-text {
+  background: rgba(88, 166, 255, 0.1);
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  color: #58a6ff;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1rem;
+}
+</style>
+
+# What are Dotfiles?
+
+<div class="content-grid">
+  <div class="section">
+    <div class="section-title">📁 Definition</div>
+    <p class="section-text">
+      Dotfiles are <strong>hidden configuration files</strong> that start with a dot (.) and control how your applications and system behave.
+    </p>
+    <p class="section-text">
+      They're the <strong>DNA of your development environment</strong> - defining everything from shell aliases to editor settings to terminal themes.
+    </p>
+  </div>
+  
+  <div class="section">
+    <div class="section-title">⚙️ Common Examples</div>
+    <div class="file-example">
+~/<br />
+├── .bashrc          # Shell configuration<br />
+├── .vimrc           # Vim editor settings<br />
+├── .gitconfig       # Git preferences<br />
+├── .tmux.conf       # Terminal multiplexer<br />
+├── .zshrc           # Zsh shell config<br />
+└── .claude/         # AI assistant config
+    </div>
+  </div>
+</div>
+
+<div class="highlight-text">
+  💡 Hidden by default, but they control everything you see and use in your terminal!
+</div>
+
+---
+layout: default
+---
+
+<style>
+.slidev-layout {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
+  padding: 2rem;
+}
+
+.slidev-layout h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #58a6ff 0%, #8be9fd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.benefit-item {
+  background: rgba(13, 17, 23, 0.6);
+  border: 1px solid rgba(139, 233, 253, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  color: #c9d1d9;
+}
+
+.benefit-title {
+  font-size: 1.2rem;
+  color: #8be9fd;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-text {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.benefit-code {
+  font-family: 'Monaco', 'Cascadia Code', monospace;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: #9ecf66;
+}
+
+.workflow-box {
+  background: rgba(13, 17, 23, 0.6);
+  border: 1px solid rgba(255, 184, 108, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.workflow-title {
+  color: #ffb86c;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.workflow-text {
+  font-family: 'Monaco', 'Cascadia Code', monospace;
+  color: #c9d1d9;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+</style>
+
+# Why Git + Dotfiles = Perfect Match
+
+<div class="benefits-grid">
+  <div class="benefit-item">
+    <div class="benefit-title">🔄 Version Control</div>
+    <p class="benefit-text">Track every change, experiment safely, and rollback when needed.</p>
+    <div class="benefit-code">git log --oneline</div>
+  </div>
+  
+  <div class="benefit-item">
+    <div class="benefit-title">🌍 Cross-Machine Sync</div>
+    <p class="benefit-text">Same environment everywhere. One command gets your entire setup.</p>
+    <div class="benefit-code">git clone dotfiles.git</div>
+  </div>
+  
+  <div class="benefit-item">
+    <div class="benefit-title">👥 Team Collaboration</div>
+    <p class="benefit-text">Share configurations with teammates. Standardize environments.</p>
+    <div class="benefit-code">git fork team-dotfiles</div>
+  </div>
+  
+  <div class="benefit-item">
+    <div class="benefit-title">💾 Bulletproof Backup</div>
+    <p class="benefit-text">Your perfect setup is always safe in the cloud.</p>
+    <div class="benefit-code">git push origin main</div>
+  </div>
+</div>
+
+<div class="workflow-box">
+  <div class="workflow-title">🚀 The Magic Workflow</div>
+  <div class="workflow-text">
+    git clone your-dotfiles<br />
+    ./install.sh<br />
+    → Perfect dev environment in 60 seconds
+  </div>
+</div>
 
 ---
 
-# Final Slide
+# My Dotfiles Repository Overview
 
-Ready for your content and instructions!
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+
+<div>
+
+## 📁 Repository Structure
+```
+memorysaver/dotfiles/
+├── claude/
+├── litellm/
+├── nvim/
+├── git/
+├── lazygit/
+├── gemini-cli/
+├── openai-codex/
+├── scripts/
+├── .zshrc
+├── .tmux.conf
+└── install.sh
+```
+
+</div>
+
+<div>
+
+## 🔗 Symlink Design in install.sh
+```bash
+# Link Claude Code settings to ~/.claude
+ln -sf "$DOTFILES/claude" "$HOME/.claude"
+```
+
+## 🚀 AI-Powered Development Focus
+- **🤖 Claude Integration**: Dedicated configuration directory
+- **🔗 LiteLLM Proxy**: Multi-AI provider routing
+- **⚡ Smart Install**: Automated symlink setup
+- **🎯 AI Toolchain**: Comprehensive assistant configurations
+
+</div>
+
+</div>
+
+**🏠 Repository**: github.com/memorysaver/dotfiles | **🎯 Focus**: AI-powered development environment
+
+---

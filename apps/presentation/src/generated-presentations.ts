@@ -16,7 +16,7 @@ export const presentations: PresentationInfo[] = [
   {
     "id": "claude-code-configuration",
     "title": "Claude Code Configuration",
-    "description": "## Claude Code Configuration\n\nA presentation about Claude Code configuration and setup.\n",
+    "description": "## Claude Code Configuration\n\nMastering AI-Powered Development in Your Terminal\n",
     "theme": "default",
     "url": "/talks/claude-code-configuration/",
     "topics": []
