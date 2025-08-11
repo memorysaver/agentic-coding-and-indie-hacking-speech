@@ -5,17 +5,21 @@
 	"sideEffects": false,
 	"type": "module",
 	"scripts": {
-		"build": "run-vite-build",
+		"build": "tsx scripts/build-presentations.ts && run-vite-build",
+		"build:presentations": "tsx scripts/build-presentations.ts",
 		"check:lint": "run-eslint",
 		"check:types": "run-tsc",
 		"deploy": "run-wrangler-deploy",
-		"dev": "run-vite-dev",
+		"dev": "tsx scripts/dev-presentations.ts",
+		"dev:presentations": "tsx scripts/dev-presentations.ts",
 		"fix:workers-types": "run-wrangler-types",
 		"preview": "run-vite-preview",
 		"test": "run-vitest"
 	},
 	"dependencies": {
 		"@repo/hono-helpers": "workspace:*",
+		"@slidev/cli": "^52.1.0",
+		"@slidev/theme-default": "^0.25.0",
 		"hono": "4.8.10",
 		"workers-tagged-logger": "0.13.1"
 	},
@@ -26,8 +30,10 @@
 		"@repo/tools": "workspace:*",
 		"@repo/typescript-config": "workspace:*",
 		"@types/node": "24.1.0",
+		"tsx": "4.20.3",
 		"vite": "7.0.6",
 		"vitest": "3.2.4",
-		"wrangler": "4.26.1"
+		"wrangler": "4.26.1",
+		"yaml": "2.8.0"
 	}
 }

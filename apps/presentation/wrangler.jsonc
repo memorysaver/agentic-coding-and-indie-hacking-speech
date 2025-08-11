@@ -9,6 +9,10 @@
 	"observability": {
 		"enabled": true
 	},
+	"assets": {
+		"directory": "./dist/presentations",
+		"binding": "ASSETS"
+	},
 	"vars": {
 		"ENVIRONMENT": "development", // overridden during deployment
 		"SENTRY_RELEASE": "unknown" // overridden during deployment
