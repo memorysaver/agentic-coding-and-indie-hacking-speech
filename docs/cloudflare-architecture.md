@@ -1,8 +1,10 @@
 # Cloudflare D1 + Drizzle + Workers + Workflows Architecture Plan
 
+> **Note**: This architecture serves as a comprehensive demo showcasing modern serverless patterns and development practices. It's designed for educational purposes and as a reference implementation for indie hacker projects.
+
 ## Architecture Overview
 
-This document outlines a comprehensive architecture for the Looplia content generation platform using Cloudflare's serverless ecosystem. The system uses RSSHub for RSS aggregation, Cloudflare D1 for data persistence, Workers for microservices, Workflows for orchestration, and Hono.js as the web framework.
+This document outlines a comprehensive architecture for demo projects that illustrate agentic coding, context engineering, and indie hacking ideas using Cloudflare's serverless ecosystem. This serves as a reference implementation showcasing modern serverless patterns including Cloudflare D1 for data persistence, Workers for microservices, Workflows for orchestration, and Hono.js as the web framework. The architecture demonstrates scalable patterns suitable for indie hacker projects and educational purposes.
 
 ### Architecture Diagram
 
@@ -129,13 +131,13 @@ graph TB
 
 ## Current State Analysis
 
-- **Existing**: Web Frontend in `apps/web` with mock data
-- **Target**: Microservices architecture with shared database, RSS processing pipeline, and workflow orchestration
+- **Existing**: Web Frontend in `apps/web` serving as a presentation platform
+- **Target**: Comprehensive demo architecture showcasing microservices patterns, shared database design, workflow orchestration, and modern serverless development practices for educational and indie hacking purposes
 
 ## Enhanced Turborepo Structure
 
 ```
-looplia/
+indie-hacker-talk/
 ├── apps/
 │   ├── web/                    # Web Frontend with D1 integration
 │   ├── workers/
@@ -165,7 +167,7 @@ looplia/
 ```typescript
 // Root package.json workspace configuration
 {
-  "name": "looplia",
+  "name": "indie-hacker-talk",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -325,7 +327,7 @@ export { sql } from 'drizzle-orm'
   "d1_databases": [
     {
       "binding": "DATABASE",
-      "database_name": "looplia-db",
+      "database_name": "indie-hacker-talk-db",
       "database_id": "your-database-id"
     }
   ],
@@ -398,7 +400,7 @@ app.route('/api/content', contentRouter)
   "d1_databases": [
     {
       "binding": "DATABASE",
-      "database_name": "looplia-db",
+      "database_name": "indie-hacker-talk-db",
       "database_id": "your-database-id"
     }
   ],
@@ -477,7 +479,7 @@ app.post('/fetch-rss', async (c) => {
   "d1_databases": [
     {
       "binding": "DATABASE",
-      "database_name": "looplia-db",
+      "database_name": "indie-hacker-talk-db",
       "database_id": "your-database-id"
     }
   ]
@@ -829,7 +831,7 @@ export class ConditionalRSSWorkflow extends WorkflowEntrypoint {
 ### Root Package.json Configuration
 ```json
 {
-  "name": "looplia",
+  "name": "indie-hacker-talk",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -897,7 +899,7 @@ export class ConditionalRSSWorkflow extends WorkflowEntrypoint {
 
 ### Setup Process
 
-1. **Create D1 Database**: `wrangler d1 create looplia-db`
+1. **Create D1 Database**: `wrangler d1 create indie-hacker-talk-db`
 2. **Generate Schemas**: `pnpm db:generate`
 3. **Run Migrations**: `pnpm db:migrate`
 4. **Local Development**: `pnpm dev` (all services)
@@ -938,7 +940,7 @@ Your worker has access to the following bindings:
   - AUTH_SERVICE: auth-service [connected]
   - RSS_SERVICE: rss-fetcher [connected]
 - D1 Databases:
-  - DATABASE: looplia-db (local)
+  - DATABASE: indie-hacker-talk-db (local)
 ```
 
 #### Alternative: Single Command Multi-Worker Setup

@@ -1,6 +1,6 @@
-# Looplia
+# Agentic Coding & Indie Hacking Presentations
 
-Looplia — an agentic workflow that automates media content creation with human‑in‑the‑loop validation.
+A monorepo for speeches and related demo projects to illustrate agentic coding, context engineering, and indie hacking ideas.
 
 ## Quick Start
 
