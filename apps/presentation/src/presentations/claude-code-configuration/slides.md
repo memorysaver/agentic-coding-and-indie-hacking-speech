@@ -784,3 +784,122 @@ layout: default
 </div>
 
 ---
+layout: default
+---
+
+<style>
+.slidev-layout {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
+  padding: 1.5rem;
+}
+
+.slidev-layout h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #58a6ff 0%, #8be9fd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-item {
+  background: rgba(13, 17, 23, 0.6);
+  border: 1px solid rgba(139, 233, 253, 0.2);
+  border-radius: 8px;
+  padding: 0.8rem;
+  color: #c9d1d9;
+}
+
+.benefit-title {
+  font-size: 0.9rem;
+  color: #8be9fd;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.benefit-text {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-code {
+  font-family: 'Monaco', 'Cascadia Code', monospace;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: #9ecf66;
+}
+
+.workflow-box {
+  background: rgba(13, 17, 23, 0.6);
+  border: 3px solid rgba(255, 184, 108, 0.5);
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.workflow-title {
+  color: #ffb86c;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.workflow-text {
+  font-family: 'Monaco', 'Cascadia Code', monospace;
+  color: #c9d1d9;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+</style>
+
+# Bonus: LiteLLM + cclitedev = Ultimate AI Coding
+
+<div class="benefits-grid">
+  <div class="benefit-item">
+    <div class="benefit-title">🔄 LiteLLM Proxy</div>
+    <p class="benefit-text">Middleware that routes AI calls between providers for cost optimization and performance tuning.</p>
+    <div class="benefit-code">Seamless model switching middleware</div>
+  </div>
+  
+  <div class="benefit-item">
+    <div class="benefit-title">🚀 cclitedev Command</div>
+    <p class="benefit-text">Custom tmux launcher integrating LiteLLM with Claude Code in a 3-pane development setup.</p>
+    <div class="benefit-code">lazygit | dev server | AI tool</div>
+  </div>
+  
+  <div class="benefit-item">
+    <div class="benefit-title">🌐 Multi-Provider Support</div>
+    <p class="benefit-text">OpenRouter, Groq, and SOTA open source models with seamless switching.</p>
+    <div class="benefit-code">openrouter | groq | anthropic</div>
+  </div>
+  
+  <div class="benefit-item">
+    <div class="benefit-title">⚙️ Environment Config</div>
+    <p class="benefit-text">Claude Code endpoint configuration through environment variables for proxy routing.</p>
+    <div class="benefit-code">ANTHROPIC_BASE_URL=localhost:4000</div>
+  </div>
+</div>
+
+<div class="workflow-box">
+  <div class="workflow-title">🎯 Launch Ultimate AI Setup</div>
+  <div class="workflow-text">
+    cclitedev groq/openai/gpt-oss-120b<br />
+    → SOTA open source models in tmux development environment
+  </div>
+</div>
+
+---
