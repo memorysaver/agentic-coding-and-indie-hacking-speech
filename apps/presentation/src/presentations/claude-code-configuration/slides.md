@@ -141,8 +141,6 @@ mdc: true
 </div>
 
 ---
-transition: fade-out
----
 
 <style>
 .considerations-slide {
@@ -664,6 +662,125 @@ ln -sf "$DOTFILES/claude" "$HOME/.claude"
 
 <div class="repo-footer">
 **🏠 Repository**: github.com/memorysaver/dotfiles | **🎯 Focus**: AI-powered development environment
+</div>
+
+---
+layout: default
+---
+
+<style>
+.slidev-layout {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
+  padding: 1.5rem;
+}
+
+.slidev-layout h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #58a6ff 0%, #8be9fd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-item {
+  background: rgba(13, 17, 23, 0.6);
+  border: 1px solid rgba(139, 233, 253, 0.2);
+  border-radius: 8px;
+  padding: 0.8rem;
+  color: #c9d1d9;
+}
+
+.benefit-title {
+  font-size: 0.9rem;
+  color: #8be9fd;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.benefit-text {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-code {
+  font-family: 'Monaco', 'Cascadia Code', monospace;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: #9ecf66;
+}
+
+.workflow-box {
+  background: rgba(13, 17, 23, 0.6);
+  border: 3px solid rgba(255, 184, 108, 0.5);
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.workflow-title {
+  color: #ffb86c;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.workflow-text {
+  font-family: 'Monaco', 'Cascadia Code', monospace;
+  color: #c9d1d9;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+</style>
+
+# SuperClaude Framework = Enhanced Claude Code
+
+<div class="benefits-grid">
+  <div class="benefit-item">
+    <div class="benefit-title">🚀 Specialized Commands</div>
+    <p class="benefit-text">16 slash commands for enhanced development functionality beyond basic Claude Code.</p>
+    <div class="benefit-code">/sc:implement /sc:build /sc:analyze</div>
+  </div>
+  
+  <div class="benefit-item">
+    <div class="benefit-title">🎭 Smart Personas</div>
+    <p class="benefit-text">AI specialists that automatically adapt to your development domain and context.</p>
+    <div class="benefit-code">architect | frontend | backend | security</div>
+  </div>
+  
+  <div class="benefit-item">
+    <div class="benefit-title">🔗 MCP Integration</div>
+    <p class="benefit-text">Seamless connections to external tools and services for extended capabilities.</p>
+    <div class="benefit-code">Context7 | Sequential | Magic | Playwright</div>
+  </div>
+  
+  <div class="benefit-item">
+    <div class="benefit-title">⚡ Enhanced Workflow</div>
+    <p class="benefit-text">Streamlined AI-powered development experience with context-aware assistance.</p>
+    <div class="benefit-code">Claude Code on steroids</div>
+  </div>
+</div>
+
+<div class="workflow-box">
+  <div class="workflow-title">🔧 Get SuperClaude Framework</div>
+  <div class="workflow-text">
+    https://github.com/SuperClaude-Org/SuperClaude_Framework<br />
+    → Claude Code with professional-grade AI enhancement
+  </div>
 </div>
 
 ---
