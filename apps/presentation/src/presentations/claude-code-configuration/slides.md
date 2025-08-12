@@ -437,46 +437,46 @@ layout: default
 <style>
 .slidev-layout {
   background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .slidev-layout h1 {
-  font-size: 2.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
   background: linear-gradient(135deg, #58a6ff 0%, #8be9fd 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .benefits-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .benefit-item {
   background: rgba(13, 17, 23, 0.6);
   border: 1px solid rgba(139, 233, 253, 0.2);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 0.8rem;
   color: #c9d1d9;
 }
 
 .benefit-title {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   color: #8be9fd;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .benefit-text {
-  font-size: 1rem;
-  line-height: 1.4;
-  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 
 .benefit-code {
@@ -490,26 +490,26 @@ layout: default
 
 .workflow-box {
   background: rgba(13, 17, 23, 0.6);
-  border: 1px solid rgba(255, 184, 108, 0.3);
+  border: 3px solid rgba(255, 184, 108, 0.5);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 0.8rem;
   text-align: center;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .workflow-title {
   color: #ffb86c;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .workflow-text {
   font-family: 'Monaco', 'Cascadia Code', monospace;
   color: #c9d1d9;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.8rem;
+  line-height: 1.3;
 }
 </style>
 
@@ -544,13 +544,81 @@ layout: default
 <div class="workflow-box">
   <div class="workflow-title">🚀 The Magic Workflow</div>
   <div class="workflow-text">
-    git clone your-dotfiles<br />
-    ./install.sh<br />
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/memorysaver/dotfiles/main/install.sh)"<br />
     → Perfect dev environment in 60 seconds
   </div>
 </div>
 
 ---
+layout: default
+---
+
+<style>
+.slidev-layout {
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
+  padding: 1.5rem;
+  color: #c9d1d9;
+  font-size: 0.9rem;
+}
+
+.slidev-layout h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #58a6ff 0%, #8be9fd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.slidev-layout h2 {
+  color: #8be9fd;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.slidev-layout pre {
+  background: #ffffff;
+  border: 1px solid rgba(139, 233, 253, 0.3);
+  border-radius: 8px;
+  padding: 0.8rem;
+  color: #24292e;
+  font-family: 'Monaco', 'Cascadia Code', monospace;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.4;
+}
+
+.slidev-layout code {
+  background: #ffffff;
+  color: #24292e;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  border: 1px solid rgba(139, 233, 253, 0.2);
+  font-family: 'Monaco', 'Cascadia Code', monospace;
+}
+
+.slidev-layout strong {
+  color: #58a6ff;
+}
+
+.slidev-layout ul li {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.repo-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(139, 233, 253, 0.2);
+  color: #8be9fd;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+</style>
 
 # My Dotfiles Repository Overview
 
@@ -586,7 +654,7 @@ ln -sf "$DOTFILES/claude" "$HOME/.claude"
 
 ## 🚀 AI-Powered Development Focus
 - **🤖 Claude Integration**: Dedicated configuration directory
-- **🔗 LiteLLM Proxy**: Multi-AI provider routing
+- **🔗 LiteLLM Proxy**: Multi-AI provider routing  
 - **⚡ Smart Install**: Automated symlink setup
 - **🎯 AI Toolchain**: Comprehensive assistant configurations
 
@@ -594,6 +662,8 @@ ln -sf "$DOTFILES/claude" "$HOME/.claude"
 
 </div>
 
+<div class="repo-footer">
 **🏠 Repository**: github.com/memorysaver/dotfiles | **🎯 Focus**: AI-powered development environment
+</div>
 
 ---
